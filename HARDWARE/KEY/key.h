@@ -22,6 +22,7 @@ typedef enum
 void EncoderInit(void);		//±àÂëÆ÷³õÊ¼»¯
 uint8_t KeyScan(void);
 void StartMachineInit(void);
+void Close_FDN304P(void);
 
 	
 	

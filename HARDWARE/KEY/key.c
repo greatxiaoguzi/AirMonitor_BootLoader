@@ -69,6 +69,15 @@ void StartMachineInit(void)
 	GPIO_Init(GPIOC, &GPIO_InitStructure);	
 	GPIO_ResetBits(GPIOC,GPIO_Pin_6);
 }
+//开始关闭电源
+void Close_FDN304P(void)
+{
+	GPIO_InitTypeDef GPIO_InitStructure;
+	
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6;				 //LED0-->PD2 端口配置
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING; 		 //推挽输出
+	GPIO_Init(GPIOC, &GPIO_InitStructure);
+}
 //编码器键值判断
 void EXTI15_10_IRQHandler()
 {

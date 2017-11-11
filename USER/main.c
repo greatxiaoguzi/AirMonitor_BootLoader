@@ -104,7 +104,10 @@ void ProgramJump(void)
 		iap_load_app(FLASH_APP1_ADDR);
 	}	
 	else
+	{
 		Show_Str(195,220,200,16,"APPÌø×ªÊ§°Ü",16,0,RED,BLACK);
+		Close_FDN304P();
+	}
 }
 void Load_AppUpdate_UI(void)
 {
